@@ -6,4 +6,4 @@ categories: jekyll update
 ---
 
 #이벤트 버블링과 캡쳐링
-![bub_cap]("../images/bubbling_capturing.jpg")
+![bub_cap]("images/bubbling_capturing.jpg")
