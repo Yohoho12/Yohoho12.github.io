@@ -5,6 +5,23 @@ date:   2018-01-21 19:35:13 +0530
 categories: jekyll update
 ---
 
-#이벤트 버블링과 캡쳐링
+# 이벤트 버블링과 캡쳐링
 ![bub_cap]("{{site.url}}/images/bubbling_capturing.jpg")
-보통 이벤트 버블링과 캡쳐링은 위 그림처럼 차례차례 일어나게 되며
+보통 이벤트 버블링과 캡쳐링은 위 그림처럼 차례차례 일어나게 된다.
+
+그렇기 때문에
+'''
+<li id='list'>
+    <input type='checkbox'>
+</li>
+'''
+처럼 html을 구성한후 li 속성에 checkbox를 토글해주는 이벤트를 추가하게 된다면 checkbox가 있는 부분을 클릭했을 경우 이벤트리스너와 checkbox 디폴트 동작이 둘다 일어나게 되며 결과적으로는 아무 변화가 없게 된다.
+
+# 이벤트 차단
+위와 같이 의도하지 않은 상황을 방지하기 위해 버블링이나 캡쳐링이 일어나는 중에
+`stoppropagation()` 이나 `stopimmediatepropagation()` 을 통해서 이벤트를 차단해 줄수도 있다. 위에서 본 문제점을 해결하기 위해서 li 에 stoppropagation을 사용해서 이벤트를 끊어준다면 checkbox가 제 기능을 하지않을까? 하지만 결과는 그대로 변화가 없다.
+
+# 디폴트 동작
+신입 교육을 받으면서 잘 이해가 되지 않아 강연해주신 분계 물어 봤었는데 체크박스나 각종 인풋이 원래 가지고있는 디폴트 동작은 버블링이나 캡쳐링과 별개로 일어나기 때문에 stoppropagation으로는 막을 수가 없다는 것이다. 적어도 내가 이해한 바로는 그랬다..
+
+따라서 문제를 해결하기 위해서는 checkbox 속성에 preventDefault()함수를 추가해서 checkbox의 디폴트 동작을 멈춰 주어야 원래 기획했던 대로 checkbox를 클릭하더라도 변화가 있게 된다.
