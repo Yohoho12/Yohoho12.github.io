@@ -6,15 +6,15 @@ categories: jekyll update
 ---
 
 # 이벤트 버블링과 캡쳐링
-![bub_cap]("{{site.url}}/images/bubbling_capturing.jpg")
+![bub_cap]("{{site.baseurl}}/images/bubbling_capturing.jpg")
 보통 이벤트 버블링과 캡쳐링은 위 그림처럼 차례차례 일어나게 된다.
 
 그렇기 때문에
-'''
+```
 <li id='list'>
     <input type='checkbox'>
 </li>
-'''
+```
 처럼 html을 구성한후 li 속성에 checkbox를 토글해주는 이벤트를 추가하게 된다면 checkbox가 있는 부분을 클릭했을 경우 이벤트리스너와 checkbox 디폴트 동작이 둘다 일어나게 되며 결과적으로는 아무 변화가 없게 된다.
 
 # 이벤트 차단
