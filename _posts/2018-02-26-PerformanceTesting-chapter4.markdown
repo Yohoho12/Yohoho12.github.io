@@ -18,3 +18,6 @@ categories: PerformanceTest
     - 테스트 환경과 프로덕션 환경 비교
     - 환경 관련 문제
     - 추가 툴이 필요한지 여부 결정
+
+### Activity 2 성능 수용 기준 식별
+### Activity 3 성능 수용 기준 식별
