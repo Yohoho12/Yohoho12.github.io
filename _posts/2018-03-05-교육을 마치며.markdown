@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "교육을 마치며"
-date:   2018-03-01 19:46:03 +0530
+date:   2018-03-05 01:46:03 +0530
 categories: summary
 ---
 # 기억나는 부분
